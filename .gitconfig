@@ -1,0 +1,31 @@
+[alias]
+    a = add
+    au = add -u
+    s = status
+    d = diff
+    ri = rebase --interactive --autosquash
+    lo = log --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    g = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    c = commit
+    cane = commit --amend --no-edit
+    rh = reset --hard
+    ds = diff --staged
+    cp = cherry-pick
+    co = checkout
+    coo = checkout -
+    fp = fetch -p
+    # fixup = "!f_fixup() { git commit --fixup \"${1-HEAD\"; }; f_fixup"
+    bd = branch -d
+    cod = checkout develop
+    com = checkout master
+    cob = checkout -b
+    pots = push origin --tags
+    pf = push --force-with-lease
+    # This is the best one
+    # tr = !git tag release-$((1 + $(git g | grep -Po '\\(tag: release-\\d+\\)' | grep -Po '\\d+' | sort -n | tail -n1| grep -Po '\\d+' || 0)))
+    ra = rebase --abort
+    rc = rebase --continue
+# [user]
+[core]
+	editor = vim
+    hooksPath = /Users/marcin/gitconfig/hooks
